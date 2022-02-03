@@ -5,7 +5,7 @@ import Header from '../../components/Header'
 import Nav from '../../components/Nav'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { ParsedUrlQuery } from 'querystring'
-import { Genres } from '../../utilities/typing'
+import { Genres, Results } from '../../utilities/typing'
 
 interface Props {
   genres: [Genres]
@@ -60,7 +60,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   }
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const API_KEY = process.env.API_KEY
   const BASE_URL = process.env.BASE_URL
 
