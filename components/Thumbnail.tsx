@@ -7,7 +7,7 @@ interface Props {
   result: Results
 }
 
-const Thumbnail = forwardRef(({ result }: Props, ref) => {
+const Thumbnail = forwardRef(({ result }: Props, ref: any) => {
   const BASE_URL = 'https://image.tmdb.org/t/p/original/'
   return (
     <div
