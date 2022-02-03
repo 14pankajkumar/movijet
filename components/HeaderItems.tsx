@@ -6,7 +6,7 @@ interface Props {
   link: string
 }
 
-function HeaderItems({ Icon, title, link }: Props) {
+const HeaderItems = ({ Icon, title, link }: Props) => {
   return (
     <Link href={link}>
       <div className="group flex w-12 cursor-pointer flex-col items-center hover:text-white sm:w-20">

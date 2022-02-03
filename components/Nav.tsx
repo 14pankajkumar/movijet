@@ -5,7 +5,7 @@ interface Props {
   genres: [Genres]
 }
 
-function Nav({ genres }: Props) {
+const Nav = ({ genres }: Props) => {
   const router = useRouter()
   return (
     <nav className="relative">

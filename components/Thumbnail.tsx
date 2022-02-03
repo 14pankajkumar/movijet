@@ -1,20 +1,23 @@
 import { ThumbUpIcon } from '@heroicons/react/outline'
 import Image from 'next/image'
-import { forwardRef } from 'react'
+import { useRouter } from 'next/router'
 import { Results } from '../utilities/typing'
 
 interface Props {
   result: Results
 }
 
-const Thumbnail = forwardRef(({ result }: Props, ref: any) => {
+const Thumbnail = ({ result }: Props) => {
   const BASE_URL = 'https://image.tmdb.org/t/p/original/'
+  const router = useRouter()
+
   return (
     <div
-      ref={ref}
       className="group transform cursor-pointer p-2 transition duration-200 ease-in hover:z-50 sm:hover:scale-105"
+      onClick={() => router.push(`/media/${result.id}`)}
     >
       <Image
+        priority
         layout="responsive"
         height={1080}
         width={1920}
@@ -22,7 +25,6 @@ const Thumbnail = forwardRef(({ result }: Props, ref: any) => {
           `${BASE_URL}${result.backdrop_path || result.poster_path}` ||
           `${BASE_URL}${result.poster_path}`
         }
-        // src="https://image.tmdb.org/t/p/original/euCnMxNRlHNxA4f9BMnWbmxPOse.jpg"
       />
       <div className="p-2 ">
         <p className="max-w-md truncate">{result.overview}</p>
@@ -37,6 +39,6 @@ const Thumbnail = forwardRef(({ result }: Props, ref: any) => {
       </div>
     </div>
   )
-})
+}
 
 export default Thumbnail
