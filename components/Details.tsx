@@ -45,7 +45,7 @@ const Details = ({ media, keyword }: Props) => {
         {keyword.keywords.map((item) => {
           return (
             <div key={item.id}>
-              <div className="text-md cursor-pointer rounded-lg bg-slate-200 p-1 font-semibold text-black">
+              <div className="flex justify-center items-center text-md cursor-pointer rounded-lg bg-zinc-600 p-1 font-semibold text-black">
                 {item.name}
               </div>
             </div>
