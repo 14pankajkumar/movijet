@@ -68,13 +68,13 @@ const Hero = ({ media, mediaUrl, socialId }: Props) => {
               href={`https://twitter.com/${socialId.twitter_id}`}
               target="_blank"
             >
-              <AiOutlineInstagram fontSize={30} />
+              <FiTwitter fontSize={30} />
             </a>
             <a
               href={`https://www.instagram.com/${socialId.twitter_id}`}
               target="_blank"
             >
-              <FiTwitter fontSize={30} />
+              <AiOutlineInstagram fontSize={30} />
             </a>
           </div>
         </div>
