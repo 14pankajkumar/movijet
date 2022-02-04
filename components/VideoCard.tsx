@@ -20,7 +20,7 @@ const VideoCard = ({ mediaUrl, media }: Props) => {
           <Image
             src={`${BASE_URL}${media.backdrop_path}`}
             priority
-            className="cursor-pointer"
+            className="cursor-pointer rounded-lg"
             height="400px"
             width="700px"
           />

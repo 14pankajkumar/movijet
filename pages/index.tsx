@@ -10,11 +10,10 @@ interface Props {
 }
 
 const Home = ({ genres, results }: Props) => {
-  
   return (
     <div>
       <Head>
-        <title>MoviJet</title>
+        <title>MoviJet - Trending</title>
       </Head>
 
       {/* Header */}

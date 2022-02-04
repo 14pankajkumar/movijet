@@ -16,10 +16,7 @@ const Genre = ({ results, genres }: Props) => {
   return (
     <div>
       <Head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
+        <title>MoviJet - genres</title>
       </Head>
 
       {/* Header */}
