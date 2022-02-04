@@ -10,13 +10,11 @@ interface Props {
 }
 
 const Home = ({ genres, results }: Props) => {
-  console.log(results);
   
   return (
     <div>
       <Head>
         <title>MoviJet</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       {/* Header */}

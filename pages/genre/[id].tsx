@@ -16,8 +16,10 @@ const Genre = ({ results, genres }: Props) => {
   return (
     <div>
       <Head>
-        <title>MoviJet</title>
-        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
       </Head>
 
       {/* Header */}
@@ -35,7 +37,7 @@ const Genre = ({ results, genres }: Props) => {
 export default Genre
 
 interface IParams extends ParsedUrlQuery {
-  slug: string
+  id: string
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {

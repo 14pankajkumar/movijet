@@ -8,7 +8,8 @@ interface Props {
 }
 
 const Thumbnail = ({ result }: Props) => {
-  const BASE_URL = 'https://image.tmdb.org/t/p/original/'
+  const BASE_URL = process.env.NEXT_PUBLIC_IMAGE_BASE_URL
+  
   const router = useRouter()
 
   return (
@@ -18,6 +19,7 @@ const Thumbnail = ({ result }: Props) => {
     >
       <Image
         priority
+        className='rounded-lg'
         layout="responsive"
         height={1080}
         width={1920}
