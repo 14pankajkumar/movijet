@@ -45,7 +45,7 @@ const Media = ({
   return (
     <div>
       <Head>
-        <title>MoviJet - {media.title}</title>
+        <title>{media.title} - MoviJet</title>
       </Head>
 
       {/* Header */}

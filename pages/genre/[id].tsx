@@ -10,13 +10,16 @@ import { Genres, Results } from '../../utilities/typing'
 interface Props {
   genres: [Genres]
   results: [Results]
+  id: number
 }
 
-const Genre = ({ results, genres }: Props) => {
+const Genre = ({ results, genres, id }: Props) => {
+  const data = genres.filter((item) => item.id == id)
+
   return (
     <div>
       <Head>
-        <title>MoviJet - genres</title>
+        <title>{data[0]?.name} - MoviJet</title>
       </Head>
 
       {/* Header */}
@@ -24,6 +27,10 @@ const Genre = ({ results, genres }: Props) => {
 
       {/* Navbar */}
       <Nav genres={genres} />
+
+      <h1 className="mx-2 mt-10 flex items-center justify-center text-xl font-bold text-white md:mx-auto md:max-w-6xl md:justify-start md:text-3xl">
+        {data[0]?.name}
+      </h1>
 
       {/* Results */}
       <ResultsCard results={results} />
@@ -54,6 +61,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props: {
       genres: genreData.genres,
       results: discoverData.results,
+      id: id,
     },
     revalidate: 60,
   }

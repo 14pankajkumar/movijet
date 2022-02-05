@@ -1,19 +1,18 @@
 import axios from 'axios'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import { Header, Nav, ResultsCard } from '../components'
-import { Genres, Results } from '../utilities/typing'
+import { Header, Nav, Sidebar } from '../components'
+import { Genres } from '../utilities/typing'
 
 interface Props {
   genres: [Genres]
-  results: [Results]
 }
 
-const Home = ({ genres, results }: Props) => {
+const Home = ({ genres }: Props) => {
   return (
     <div>
       <Head>
-        <title>MoviJet - Trending</title>
+        <title>MoviJet</title>
       </Head>
 
       {/* Header */}
@@ -21,9 +20,6 @@ const Home = ({ genres, results }: Props) => {
 
       {/* Navbar */}
       <Nav genres={genres} />
-
-      {/* Results */}
-      <ResultsCard results={results} />
     </div>
   )
 }
@@ -38,17 +34,9 @@ export const getStaticProps: GetStaticProps = async () => {
     .get(`${BASE_URL}/3/genre/movie/list?api_key=${API_KEY}&language=en-US`)
     .then((res) => res.data)
 
-  const trendingData = await axios
-    .get(
-      `
-    ${BASE_URL}/3/trending/movie/week?api_key=${API_KEY}`
-    )
-    .then((res) => res.data)
-
   return {
     props: {
       genres: genreData.genres,
-      results: trendingData.results,
     },
     revalidate: 60,
   }
