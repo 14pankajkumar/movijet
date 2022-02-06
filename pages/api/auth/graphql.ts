@@ -9,10 +9,7 @@ export default async function protectedHandler(
   const session = await getSession({ req })
 
   if (session) {
-    return res.send({
-      content:
-        "This is protected content. You can access this content because you are signed in.",
-    })
+    return res.status(200).redirect("https://api-ap-south-1.graphcms.com/v2/ckz75lw970b4u01wecxqj51i1/master")
   }
 
   res.send({

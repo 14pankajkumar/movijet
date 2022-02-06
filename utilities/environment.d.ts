@@ -19,7 +19,7 @@ namespace NodeJS {
         TWITTER_SECRET: string
         DATABASE_URL: string
         SECRET: string
-        GRAPH_API_KEY: string
+        NEXT_PUBLIC_GRAPH_API_KEY: string
         GRAPH_AUTH_KEY: string
     }
 }

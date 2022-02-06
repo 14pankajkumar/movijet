@@ -119,3 +119,15 @@ export interface Reviews {
     updated_at: string
     url: string
 }
+
+export interface GetUser {
+    id: string
+    uid: string
+    username: string
+    name: string
+    email: string
+    profileImageUrl: string
+    profileImage: {
+        url: string
+    }
+}
