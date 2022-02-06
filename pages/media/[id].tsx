@@ -18,6 +18,7 @@ import {
   Header,
   Hero,
   Nav,
+  Recommendations,
   ReviewsCard,
   VideoCard,
 } from '../../components'
@@ -31,6 +32,7 @@ interface Props {
   socialId: SocialId
   keyword: Keyword
   reviews: [Reviews]
+  recommendationsData: [Results]
 }
 
 const Media = ({
@@ -41,7 +43,9 @@ const Media = ({
   socialId,
   keyword,
   reviews,
+  recommendationsData,
 }: Props) => {
+
   return (
     <div>
       <Head>
@@ -63,6 +67,8 @@ const Media = ({
       <VideoCard mediaUrl={mediaUrl} media={media} />
 
       <ReviewsCard reviews={reviews} />
+
+      <Recommendations recommendationsData={recommendationsData} />
     </div>
   )
 }
@@ -86,7 +92,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     .get(`${BASE_URL}/3/movie/${id}?api_key=${API_KEY}&language=en-US`)
     .then((res) => res.data)
 
-  const getCatsData = await axios
+  const getCastsData = await axios
     .get(`${BASE_URL}/3/movie/${id}/credits?api_key=${API_KEY}&language=en-US`)
     .then((res) => res.data)
 
@@ -106,15 +112,22 @@ export const getStaticProps: GetStaticProps = async (context) => {
     )
     .then((res) => res.data)
 
+  const getRecommendationsData = await axios
+    .get(
+      `${BASE_URL}/3/movie/${id}/recommendations?api_key=${API_KEY}&language=en-US&page=1`
+    )
+    .then((res) => res.data)
+
   return {
     props: {
       genres: genreData.genres,
       media: getMediaDetails,
-      casts: getCatsData.cast,
+      casts: getCastsData.cast,
       mediaUrl: getMediaUrlData,
       socialId: getSocialIdData,
       keyword: getKeywordData,
       reviews: getReviwsData.results,
+      recommendationsData: getRecommendationsData.results,
     },
     revalidate: 60,
   }

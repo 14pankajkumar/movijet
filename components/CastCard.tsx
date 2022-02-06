@@ -23,6 +23,9 @@ const CastCard = ({ casts }: Props) => {
             >
               <div>
                 <Image
+                  placeholder="blur"
+                  blurDataURL={`${BASE_URL}${cast.profile_path}`}
+                  priority={true}
                   src={`${BASE_URL}${cast.profile_path}`}
                   className="rounded-lg object-cover"
                   layout="responsive"

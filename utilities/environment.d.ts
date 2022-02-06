@@ -21,5 +21,10 @@ namespace NodeJS {
         SECRET: string
         NEXT_PUBLIC_GRAPH_API_KEY: string
         GRAPH_AUTH_KEY: string
+        API_KEY: string
+        BASE_URL: string
+        NEXT_PUBLIC_USER_AVATAR_URL: string
+        NEXT_PUBLIC_IMAGE_BASE_URL: string
+        NEXT_PUBLIC_GA_KEY: string
     }
 }

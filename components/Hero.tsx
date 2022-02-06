@@ -17,6 +17,9 @@ const Hero = ({ media, mediaUrl, socialId }: Props) => {
     <div className="relative my-10 h-full w-full bg-black bg-opacity-30 py-8">
       <div className="opacity-20">
         <Image
+          placeholder="blur"
+          blurDataURL={`${BASE_URL}${media.poster_path}`}
+          priority={true}
           className="absolute object-cover"
           layout="fill"
           src={`${BASE_URL}${media.backdrop_path}`}
@@ -26,8 +29,10 @@ const Hero = ({ media, mediaUrl, socialId }: Props) => {
       <div className="relative  mx-auto grid max-w-6xl justify-between md:flex">
         <div className="flex items-center justify-center md:w-2/6">
           <Image
+            placeholder="blur"
+            blurDataURL={`${BASE_URL}${media.poster_path}`}
+            priority={true}
             className="cursor-pointer rounded-lg"
-            priority
             height="450px"
             width="300px"
             src={`${BASE_URL}${media.poster_path}`}

@@ -9,17 +9,19 @@ interface Props {
 
 const Thumbnail = ({ result }: Props) => {
   const BASE_URL = process.env.NEXT_PUBLIC_IMAGE_BASE_URL
-  
+
   const router = useRouter()
 
   return (
     <div
       className="group transform cursor-pointer p-2 transition duration-200 ease-in hover:z-50 sm:hover:scale-105"
-      onClick={() => router.push(`/media/${result.id}`)}
+      onClick={() => router.push(`/media/${result.id}?=${result.title}`)}
     >
       <Image
-        priority
-        className='rounded-lg'
+        priority={true}
+        placeholder="blur"
+        blurDataURL={`${BASE_URL}${result.backdrop_path}`}
+        className="rounded-lg"
         layout="responsive"
         height={1080}
         width={1920}
