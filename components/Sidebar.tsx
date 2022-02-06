@@ -39,14 +39,14 @@ const Sidebar = ({ showSidebar, setShowSidebar }: Props) => {
               </div>
             </Link>
 
-            <Link href="collection">
+            <Link href="/collection">
               <div className="flex cursor-pointer items-center justify-around p-5 hover:bg-[#06202A] hover:text-white sm:h-20">
                 <CollectionIcon className="h-5 w-5 md:h-8 md:w-8" />
                 <p className="text-xs tracking-widest md:text-lg">COLLECTION</p>
               </div>
             </Link>
 
-            <Link href="top-rated">
+            <Link href="/top-rated">
               <div className="flex cursor-pointer items-center justify-around p-5 hover:bg-[#06202A] hover:text-white sm:h-20">
                 <StarIcon className="h-5 w-5 md:h-8 md:w-8" />
                 <p className="text-xs tracking-widest md:text-lg">TOP RATED</p>
