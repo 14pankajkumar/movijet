@@ -16,7 +16,7 @@ const Header = () => {
   const { data: session } = useSession()
 
   return (
-    <header className="m-5 flex h-auto flex-col items-center justify-between sm:flex-row">
+    <header className="mx-5 flex h-auto flex-col items-center justify-between sm:flex-row">
       <div className="relative flex max-w-2xl flex-grow justify-evenly">
         <HeaderItems link="/" title="HOME" Icon={HomeIcon} />
 
