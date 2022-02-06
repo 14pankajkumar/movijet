@@ -1,3 +1,4 @@
+import { Heading } from '.'
 import { Keyword, Media } from '../utilities/typing'
 
 interface Props {
@@ -6,12 +7,9 @@ interface Props {
 }
 
 const Details = ({ media, keyword }: Props) => {
-    
   return (
     <div className="relative bg-black bg-opacity-30 py-8">
-      <h1 className="mx-2 flex items-center justify-center text-xl font-bold md:mx-auto md:max-w-6xl md:justify-start md:text-3xl">
-        Details
-      </h1>
+      <Heading title="Details" />
 
       <div className="mx-auto mt-1 mb-5 grid w-8/12 grid-cols-2 items-center px-5 md:flex md:justify-between">
         <div>
@@ -38,14 +36,13 @@ const Details = ({ media, keyword }: Props) => {
         </div>
       </div>
 
-      <h1 className="mx-2 flex items-center justify-center text-xl font-bold md:mx-auto md:max-w-6xl md:justify-start md:text-2xl">
-        Keywords
-      </h1>
-      <div className="mx-auto mt-1 mb-5 grid w-8/12 grid-cols-2 items-center gap-4 px-5 md:grid md:justify-between md:grid-cols-3">
+      <Heading title="Keywords" />
+
+      <div className="mx-auto mt-1 mb-5 grid w-8/12 grid-cols-2 items-center gap-4 px-5 md:grid md:grid-cols-3 md:justify-between">
         {keyword.keywords.map((item) => {
           return (
             <div key={item.id}>
-              <div className="flex justify-center items-center text-md cursor-pointer rounded-lg bg-zinc-600 p-1 font-semibold text-black">
+              <div className="text-md flex cursor-pointer items-center justify-center rounded-lg bg-zinc-600 p-1 font-semibold text-black">
                 {item.name}
               </div>
             </div>

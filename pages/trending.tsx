@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import { Header, Nav, ResultsCard } from '../components'
+import { Header, Heading, Nav, ResultsCard } from '../components'
 import { Genres, Results } from '../utilities/typing'
 
 interface Props {
@@ -22,9 +22,7 @@ const Trending = ({ genres, results }: Props) => {
       {/* Navbar */}
       <Nav genres={genres} />
 
-      <h1 className="mx-2 mt-10 flex items-center justify-center text-xl font-bold text-white md:mx-auto md:max-w-6xl md:justify-start md:text-3xl">
-        Trending
-      </h1>
+      <Heading title='Trending' />
 
       {/* Results */}
       <ResultsCard results={results} />

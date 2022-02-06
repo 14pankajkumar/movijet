@@ -4,6 +4,7 @@ import { getSession, useSession } from 'next-auth/react'
 import Head from 'next/head'
 import { Header, Nav } from '../../components'
 import { Genres } from '../../utilities/typing'
+import type { Session } from 'next-auth'
 
 interface Props {
   genres: [Genres]
@@ -39,7 +40,9 @@ const User = ({ genres }: Props) => {
 
 export default User
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getServerSideProps: GetServerSideProps<{
+  session: Session | null
+}> = async (context) => {
   const API_KEY = process.env.API_KEY
   const BASE_URL = process.env.BASE_URL
 

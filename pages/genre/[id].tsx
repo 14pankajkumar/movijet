@@ -1,6 +1,6 @@
 import axios from 'axios'
 import Head from 'next/head'
-import { ResultsCard } from '../../components'
+import { Heading, ResultsCard } from '../../components'
 import Header from '../../components/Header'
 import Nav from '../../components/Nav'
 import { GetStaticPaths, GetStaticProps } from 'next'
@@ -28,9 +28,7 @@ const Genre = ({ results, genres, id }: Props) => {
       {/* Navbar */}
       <Nav genres={genres} />
 
-      <h1 className="mx-2 mt-10 flex items-center justify-center text-xl font-bold md:mx-auto md:max-w-6xl md:justify-start md:text-3xl">
-        {data[0]?.name}
-      </h1>
+      <Heading title={data[0]?.name} />
 
       {/* Results */}
       <ResultsCard results={results} />

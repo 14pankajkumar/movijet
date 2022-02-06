@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { Heading } from '.'
 import { Media, MediaUrl } from '../utilities/typing'
 
 interface Props {
@@ -11,9 +12,7 @@ const VideoCard = ({ mediaUrl, media }: Props) => {
 
   return (
     <div className="relative py-8">
-      <h1 className="mx-2 flex items-center justify-center text-xl font-bold md:mx-auto md:max-w-6xl md:justify-start md:text-3xl">
-        Watch Movie
-      </h1>
+      <Heading title="Watch Movie" />
 
       <div className="mb-5 mt-5 flex w-full items-center justify-center overflow-hidden rounded-lg px-5">
         <a href={mediaUrl?.mediaUrl} target="_blank">

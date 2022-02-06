@@ -1,6 +1,6 @@
 import { Reviews } from '../utilities/typing'
 import { AiOutlineStar } from 'react-icons/ai'
-import Image from 'next/image'
+import { Heading } from '.'
 
 interface Props {
   reviews: [Reviews]
@@ -11,9 +11,7 @@ const ReviewsCard = ({ reviews }: Props) => {
 
   return (
     <div className="relative bg-black bg-opacity-30 py-8">
-      <h1 className="mx-2 flex items-center justify-center text-xl font-bold md:mx-auto md:max-w-6xl md:justify-start md:text-3xl">
-        Reviews
-      </h1>
+      <Heading title="Reviews" />
 
       <div className="my-10 flex-wrap justify-center gap-5 px-5 sm:grid md:grid-cols-3 xl:grid-cols-2 3xl:flex">
         {reviews.map((review) => {
@@ -26,7 +24,7 @@ const ReviewsCard = ({ reviews }: Props) => {
               <div className="relative flex items-center justify-start gap-4">
                 <a href={`${review.url}`} target="_blank">
                   <img
-                    className="h-20 w-20 rounded-full hover:ring-2 hover:ring-red-500 object-cover"
+                    className="h-20 w-20 rounded-full object-cover hover:ring-2 hover:ring-red-500"
                     src={
                       src || 'https://media.graphcms.com/pGR8cydvSAqEk0IRG6ap'
                     }
@@ -58,7 +56,9 @@ const ReviewsCard = ({ reviews }: Props) => {
               </div>
 
               <div className="p-3">
-                <p className="text-black text-sm pl-10">{review.content.slice(0, 200)}...</p>
+                <p className="pl-10 text-sm text-black">
+                  {review.content.slice(0, 200)}...
+                </p>
               </div>
             </div>
           )

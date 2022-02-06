@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import { Heading } from '.'
 import { Casts, Media } from '../utilities/typing'
 
 interface Props {
@@ -11,9 +12,8 @@ const CastCard = ({ casts }: Props) => {
 
   return (
     <div className="relative">
-      <h1 className="mx-2 flex items-center justify-center text-xl md:text-3xl font-bold md:mx-auto md:max-w-6xl md:justify-start">
-      Top Billed Cast
-      </h1>
+      <Heading title="Top Billed Cast" />
+
       <div className="my-10 flex-wrap justify-center px-5 sm:grid md:grid-cols-3 xl:grid-cols-5 3xl:flex">
         {casts.slice(0, 10).map((cast) => {
           return (

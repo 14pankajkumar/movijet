@@ -119,14 +119,3 @@ export interface Reviews {
     updated_at: string
     url: string
 }
-
-export interface Session {
-    user?: {
-        name?: string | null;
-        email?: string | null;
-        image?: string | null;
-        username?: string | null;
-        uid?: number | null;
-    };
-    expires: ISODateString;
-}

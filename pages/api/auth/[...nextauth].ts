@@ -1,8 +1,8 @@
 import NextAuth from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
 
-const ClientId: string = `${process.env.GOOGLE_CLIENT_ID}`
-const ClientSecret: string = `${process.env.GOOGLE_CLIENT_SECRET}`
+const ClientId = process.env.GOOGLE_CLIENT_ID
+const ClientSecret = process.env.GOOGLE_CLIENT_SECRET
 
 interface Props {
   session: any
@@ -20,7 +20,7 @@ export default NextAuth({
     // ...add more providers here
   ],
 
-  secret: process.env.secret,
+  secret: process.env.SECRET,
 
   pages: {
     signIn: "/auth/signin"

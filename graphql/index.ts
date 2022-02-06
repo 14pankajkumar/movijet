@@ -1,6 +1,6 @@
 import { gql, request } from "graphql-request"
 
-const graphAPI: string = `${process.env.GRAPH_API_KEY}`
+const graphAPI = process.env.GRAPH_API_KEY
 
 export const getMedia = async (mediaId: string) => {
     const query = gql`
