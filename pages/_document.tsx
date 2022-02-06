@@ -14,11 +14,16 @@ class Document extends NextDocument<Props> {
             href="https://vjs.zencdn.net/7.17.0/video-js.css"
             rel="stylesheet"
           />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Philosopher&family=Poppins:ital,wght@0,600;1,500&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />
           <NextScript />
-          <script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
         </body>
       </Html>
     )

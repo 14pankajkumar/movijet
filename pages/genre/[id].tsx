@@ -28,7 +28,7 @@ const Genre = ({ results, genres, id }: Props) => {
       {/* Navbar */}
       <Nav genres={genres} />
 
-      <h1 className="mx-2 mt-10 flex items-center justify-center text-xl font-bold text-white md:mx-auto md:max-w-6xl md:justify-start md:text-3xl">
+      <h1 className="mx-2 mt-10 flex items-center justify-center text-xl font-bold md:mx-auto md:max-w-6xl md:justify-start md:text-3xl">
         {data[0]?.name}
       </h1>
 

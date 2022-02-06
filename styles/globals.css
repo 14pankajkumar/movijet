@@ -3,18 +3,21 @@
 @tailwind utilities;
 
 @layer base {
-    body {
-      @apply bg-[#06202A] text-gray-300;
-    }
+  body {
+    @apply bg-[#06202A] text-gray-300;
   }
-  ::-webkit-scrollbar {
-    width: 8px;
+  html {
+    @apply font-body;
   }
-  ::-webkit-scrollbar-thumb {
-    background: gray;
-    border-radius: 6px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: white;
-  }
-  
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+}

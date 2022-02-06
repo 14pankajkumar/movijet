@@ -1,19 +1,19 @@
 import Image from 'next/image'
 import {
-  StarIcon,
-  CollectionIcon,
   HomeIcon,
-  LightningBoltIcon,
   SearchIcon,
   UserIcon,
   FilmIcon,
 } from '@heroicons/react/outline'
 import Link from 'next/link'
-import { HeaderItems, Sidebar } from '.'
+import { HeaderItems, Sidebar, UserSidebar } from '.'
 import { useState } from 'react'
+import { useSession } from 'next-auth/react'
 
 const Header = () => {
   const [showSidebar, setShowSidebar] = useState(false)
+  const [showUserSidebar, setUserShowSidebar] = useState(false)
+  const { data: session } = useSession()
 
   return (
     <header className="m-5 flex h-auto flex-col items-center justify-between sm:flex-row">
@@ -31,7 +31,24 @@ const Header = () => {
         </div>
 
         <HeaderItems link="/" title="SEARCH" Icon={SearchIcon} />
-        <HeaderItems link="/login" title="ACCOUNT" Icon={UserIcon} />
+
+        {session ? (
+          <div
+            onClick={() => setUserShowSidebar(true)}
+            className="group flex w-12 cursor-pointer flex-col items-center hover:text-white sm:w-20"
+          >
+            <img
+              src={`${session?.user?.image}`}
+              className="mb-1 h-8 rounded-full group-hover:animate-bounce"
+              alt=""
+            />
+            <p className="tracking-widest opacity-0 group-hover:opacity-100">
+              ACCOUNT
+            </p>
+          </div>
+        ) : (
+          <HeaderItems link="/auth/signin" title="SIGNIN" Icon={UserIcon} />
+        )}
       </div>
       <div>
         <Link href="/">
@@ -44,6 +61,10 @@ const Header = () => {
         </Link>
       </div>
       <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+      <UserSidebar
+        showUserSidebar={showUserSidebar}
+        setUserShowSidebar={setUserShowSidebar}
+      />
     </header>
   )
 }

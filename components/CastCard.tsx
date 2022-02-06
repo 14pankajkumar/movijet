@@ -11,7 +11,7 @@ const CastCard = ({ casts }: Props) => {
 
   return (
     <div className="relative">
-      <h1 className="mx-2 flex items-center justify-center text-xl md:text-3xl font-bold text-white md:mx-auto md:max-w-6xl md:justify-start">
+      <h1 className="mx-2 flex items-center justify-center text-xl md:text-3xl font-bold md:mx-auto md:max-w-6xl md:justify-start">
       Top Billed Cast
       </h1>
       <div className="my-10 flex-wrap justify-center px-5 sm:grid md:grid-cols-3 xl:grid-cols-5 3xl:flex">

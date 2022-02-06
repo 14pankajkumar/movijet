@@ -11,7 +11,7 @@ const VideoCard = ({ mediaUrl, media }: Props) => {
 
   return (
     <div className="relative py-8">
-      <h1 className="mx-2 flex items-center justify-center text-xl font-bold text-white md:mx-auto md:max-w-6xl md:justify-start md:text-3xl">
+      <h1 className="mx-2 flex items-center justify-center text-xl font-bold md:mx-auto md:max-w-6xl md:justify-start md:text-3xl">
         Watch Movie
       </h1>
 

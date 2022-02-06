@@ -11,7 +11,7 @@ const ReviewsCard = ({ reviews }: Props) => {
 
   return (
     <div className="relative bg-black bg-opacity-30 py-8">
-      <h1 className="mx-2 flex items-center justify-center text-xl font-bold text-white md:mx-auto md:max-w-6xl md:justify-start md:text-3xl">
+      <h1 className="mx-2 flex items-center justify-center text-xl font-bold md:mx-auto md:max-w-6xl md:justify-start md:text-3xl">
         Reviews
       </h1>
 

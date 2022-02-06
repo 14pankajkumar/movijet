@@ -30,26 +30,26 @@ const Sidebar = ({ showSidebar, setShowSidebar }: Props) => {
           showSidebar ? '-translate-x-0 ' : '-translate-x-full'
         }`}
       >
-        <div className="mt-16 h-full w-full p-5">
+        <div className="mt-16 h-full w-full p-0 md:p-5">
           <div className="group flex h-full w-full flex-col">
             <Link href="/trending">
-              <div className="flex cursor-pointer items-center justify-around p-5 hover:bg-[#06202A] sm:h-20">
+              <div className="flex cursor-pointer items-center justify-around p-5 hover:bg-[#06202A] hover:text-white sm:h-20">
                 <LightningBoltIcon className="h-5 w-5 md:h-8 md:w-8" />
-                <p className="tracking-widest">TRENDING</p>
+                <p className="text-xs tracking-widest md:text-lg">TRENDING</p>
               </div>
             </Link>
 
             <Link href="collection">
               <div className="flex cursor-pointer items-center justify-around p-5 hover:bg-[#06202A] hover:text-white sm:h-20">
                 <CollectionIcon className="h-5 w-5 md:h-8 md:w-8" />
-                <p className="tracking-widest">COLLECTION</p>
+                <p className="text-xs tracking-widest md:text-lg">COLLECTION</p>
               </div>
             </Link>
 
             <Link href="top-rated">
               <div className="flex cursor-pointer items-center justify-around p-5 hover:bg-[#06202A] hover:text-white sm:h-20">
                 <StarIcon className="h-5 w-5 md:h-8 md:w-8" />
-                <p className="tracking-widest">TOP RATED</p>
+                <p className="text-xs tracking-widest md:text-lg">TOP RATED</p>
               </div>
             </Link>
           </div>

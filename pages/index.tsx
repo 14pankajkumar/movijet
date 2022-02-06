@@ -1,9 +1,9 @@
 import axios from 'axios'
 import { GetStaticProps } from 'next'
+import { useSession } from 'next-auth/react'
 import Head from 'next/head'
-import { Header, Nav, Sidebar } from '../components'
+import { Header, Nav } from '../components'
 import { Genres } from '../utilities/typing'
-
 interface Props {
   genres: [Genres]
 }

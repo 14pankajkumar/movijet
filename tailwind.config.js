@@ -4,6 +4,9 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    fontFamily: {
+      body: ['Poppins', 'sans-serif'],
+    },
     extend: {
       screens: {
         '3xl': '2000px',

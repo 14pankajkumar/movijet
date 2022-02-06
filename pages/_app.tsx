@@ -2,8 +2,12 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import Script from 'next/script'
+import { SessionProvider } from 'next-auth/react'
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const MyApp = ({
+  Component,
+  pageProps: { session, ...pageProps },
+}: AppProps) => {
   return (
     <>
       <Head>
@@ -27,7 +31,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
                gtag('config', '${process.env.NEXT_PUBLIC_GA_KEY}');
           `}
       </Script>
-      <Component {...pageProps} />
+      <SessionProvider session={session}>
+        <Component {...pageProps} />
+      </SessionProvider>
     </>
   )
 }
