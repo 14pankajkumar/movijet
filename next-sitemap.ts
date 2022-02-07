@@ -3,7 +3,8 @@
 const siteUrl = 'https://movijet.vercel.app'
 
 module.exports = {
-    siteUrl
+    siteUrl,
+    generateRobotsTxt: true
 }
 
 export { }
