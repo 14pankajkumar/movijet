@@ -15,9 +15,16 @@ const Thumbnail = ({ result }: Props) => {
   return (
     <div
       className="group transform cursor-pointer p-2 transition duration-200 ease-in hover:z-50 sm:hover:scale-105"
-      onClick={() => router.push(`/media/${result.id}?=${result.title}`)}
+      onClick={() =>
+        router.push(
+          `/media/${result.id}?title=${result.title
+            .toLowerCase()
+            .replaceAll(' ', '-')}`
+        )
+      }
     >
       <Image
+        alt={result.title}
         priority={true}
         placeholder="blur"
         blurDataURL={`${BASE_URL}${result.backdrop_path}`}

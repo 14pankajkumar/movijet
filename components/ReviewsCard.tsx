@@ -24,6 +24,7 @@ const ReviewsCard = ({ reviews }: Props) => {
               <div className="relative flex items-center justify-start gap-4">
                 <a href={`${review.url}`} target="_blank">
                   <img
+                    alt={review.author_details.name}
                     className="h-20 w-20 rounded-full object-cover hover:ring-2 hover:ring-red-500"
                     src={
                       src || 'https://media.graphcms.com/pGR8cydvSAqEk0IRG6ap'

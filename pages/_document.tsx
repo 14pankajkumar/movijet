@@ -8,6 +8,11 @@ class Document extends NextDocument<Props> {
     return (
       <Html>
         <Head>
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6374059667994234"
+            crossOrigin="anonymous"
+          ></script>
           <link rel="icon" href="/favicon.ico" key="shortcutIcon" />
           <link
             href="https://vjs.zencdn.net/7.17.0/video-js.css"

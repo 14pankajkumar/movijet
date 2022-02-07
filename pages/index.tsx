@@ -42,6 +42,7 @@ const Home = ({ genres, popularData }: Props) => {
     <div>
       <Head>
         <title>MoviJet</title>
+        <meta name="description" content="" />
       </Head>
 
       <div

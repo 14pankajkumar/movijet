@@ -23,6 +23,7 @@ const CastCard = ({ casts }: Props) => {
             >
               <div>
                 <Image
+                  alt={cast.name}
                   placeholder="blur"
                   blurDataURL={`${BASE_URL}${cast.profile_path}`}
                   priority={true}

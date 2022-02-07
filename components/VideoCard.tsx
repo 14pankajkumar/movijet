@@ -17,6 +17,7 @@ const VideoCard = ({ mediaUrl, media }: Props) => {
       <div className="mb-5 mt-5 flex w-full items-center justify-center overflow-hidden rounded-lg px-5">
         <a href={mediaUrl?.mediaUrl} target="_blank">
           <Image
+            alt={media.title}
             placeholder="blur"
             blurDataURL={`${BASE_URL}${media.backdrop_path}`}
             src={`${BASE_URL}${media.backdrop_path}`}

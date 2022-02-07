@@ -22,6 +22,7 @@ const Recommendations = ({ recommendationsData }: Props) => {
               className="group transform cursor-pointer p-2 transition duration-200 ease-in hover:z-50 sm:hover:scale-105"
             >
               <Image
+                alt={item.title}
                 placeholder="blur"
                 blurDataURL={`${BASE_URL}${item.poster_path}`}
                 priority={true}

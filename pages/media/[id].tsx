@@ -16,9 +16,11 @@ import {
   CastCard,
   Details,
   Header,
+  Heading,
   Hero,
   Nav,
   Recommendations,
+  ResultsCard,
   ReviewsCard,
   VideoCard,
 } from '../../components'
@@ -45,7 +47,6 @@ const Media = ({
   reviews,
   recommendationsData,
 }: Props) => {
-
   return (
     <div>
       <Head>
@@ -68,7 +69,8 @@ const Media = ({
 
       <ReviewsCard reviews={reviews} />
 
-      <Recommendations recommendationsData={recommendationsData} />
+      <Heading title="Recommendations" />
+      <ResultsCard results={recommendationsData} />
     </div>
   )
 }
