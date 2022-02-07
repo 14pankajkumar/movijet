@@ -26,5 +26,6 @@ namespace NodeJS {
         NEXT_PUBLIC_USER_AVATAR_URL: string
         NEXT_PUBLIC_IMAGE_BASE_URL: string
         NEXT_PUBLIC_GA_KEY: string
+        SITE_URL: string
     }
 }

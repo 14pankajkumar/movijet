@@ -1,6 +1,6 @@
 import axios from 'axios'
 import Head from 'next/head'
-import { Heading, ResultsCard } from '../../components'
+import { Footer, Heading, ResultsCard } from '../../components'
 import Header from '../../components/Header'
 import Nav from '../../components/Nav'
 import { GetStaticPaths, GetStaticProps } from 'next'
@@ -19,7 +19,23 @@ const Genre = ({ results, genres, id }: Props) => {
   return (
     <div>
       <Head>
-        <title>{data[0]?.name} - MoviJet</title>
+        <title>{data[0]?.name} Movies and TV shows - MoviJet</title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta
+          name="description"
+          content="Movijet where you can get the latest information about your favourite movies and
+          TV shows. Entertainment 720p Movies, 1080p movies, Dual Audio Movies, Hindi Dubbed Series, Hollywood Movies"
+        />
+        <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=7" />
+        <meta
+          name="keywords"
+          content={`${data[0]?.name}, movies to watch on netflix, movies to watch on prime, Movies, TV Shows, Streaming, Reviews, API, Actors, Actresses, Photos, User Ratings, Synopsis, Trailers, Teasers, Credits, Cast`}
+        />
       </Head>
 
       {/* Header */}
@@ -32,6 +48,7 @@ const Genre = ({ results, genres, id }: Props) => {
 
       {/* Results */}
       <ResultsCard results={results} />
+      <Footer />
     </div>
   )
 }

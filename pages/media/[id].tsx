@@ -15,6 +15,7 @@ import {
 import {
   CastCard,
   Details,
+  Footer,
   Header,
   Heading,
   Hero,
@@ -50,7 +51,26 @@ const Media = ({
   return (
     <div>
       <Head>
-        <title>{media.title} - MoviJet</title>
+        <title>
+          {media.title} || Download {media.title} || Watch online {media.title}{' '}
+          - MoviJet
+        </title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta
+          name="description"
+          content="Movijet where you can get the latest information about your favourite movies and
+          TV shows. Entertainment 720p Movies, 1080p movies, Dual Audio Movies, Hindi Dubbed Series, Hollywood Movies"
+        />
+        <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=7" />
+        <meta
+          name="keywords"
+          content={`${media.title}, movies to watch on netflix, movies to watch on prime, Movies, TV Shows, Streaming, Reviews, API, Actors, Actresses, Photos, User Ratings, Synopsis, Trailers, Teasers, Credits, Cast`}
+        />
       </Head>
 
       {/* Header */}
@@ -71,6 +91,7 @@ const Media = ({
 
       <Heading title="Recommendations" />
       <ResultsCard results={recommendationsData} />
+      <Footer />
     </div>
   )
 }

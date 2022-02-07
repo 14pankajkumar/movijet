@@ -2,7 +2,7 @@ import axios from 'axios'
 import { GetServerSideProps } from 'next'
 import { getSession, useSession } from 'next-auth/react'
 import Head from 'next/head'
-import { Header, Nav } from '../../components'
+import { Footer, Header, Nav } from '../../components'
 import { Genres } from '../../utilities/typing'
 import type { Session } from 'next-auth'
 
@@ -17,6 +17,10 @@ const User = ({ genres }: Props) => {
     <div>
       <Head>
         <title>MoviJet</title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
       </Head>
 
       {/* Header */}
@@ -34,6 +38,7 @@ const User = ({ genres }: Props) => {
           </h1>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

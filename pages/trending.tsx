@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import { Header, Heading, Nav, ResultsCard } from '../components'
+import { Footer, Header, Heading, Nav, ResultsCard } from '../components'
 import { Genres, Results } from '../utilities/typing'
 
 interface Props {
@@ -13,7 +13,23 @@ const Trending = ({ genres, results }: Props) => {
   return (
     <div>
       <Head>
-        <title>Trending - MoviJet</title>
+        <title>Trending Movies and TV shows - MoviJet</title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta
+          name="description"
+          content="Movijet where you can get the latest information about your favourite movies and
+          TV shows. Entertainment 720p Movies, 1080p movies, Dual Audio Movies, Hindi Dubbed Series, Hollywood Movies"
+        />
+        <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=7" />
+        <meta
+          name="keywords"
+          content="Trending movies, Trending TV shows, movies to watch on netflix, movies to watch on prime, Movies, TV Shows, Streaming, Reviews, API, Actors, Actresses, Photos, User Ratings, Synopsis, Trailers, Teasers, Credits, Cast"
+        />
       </Head>
 
       {/* Header */}
@@ -22,10 +38,11 @@ const Trending = ({ genres, results }: Props) => {
       {/* Navbar */}
       <Nav genres={genres} />
 
-      <Heading title='Trending' />
+      <Heading title="Trending" />
 
       {/* Results */}
       <ResultsCard results={results} />
+      <Footer />
     </div>
   )
 }

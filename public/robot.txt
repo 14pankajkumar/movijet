@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://movijet.vercel.app/api/my-sitemap

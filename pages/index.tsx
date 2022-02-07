@@ -4,7 +4,7 @@ import { useSession } from 'next-auth/react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useEffect } from 'react'
-import { Header, Heading, Nav, ResultsCard } from '../components'
+import { Footer, Header, Heading, Nav, ResultsCard } from '../components'
 import { getUser, saveUser } from '../graphql'
 import { Genres, Results } from '../utilities/typing'
 interface Props {
@@ -41,8 +41,26 @@ const Home = ({ genres, popularData }: Props) => {
   return (
     <div>
       <Head>
-        <title>MoviJet</title>
-        <meta name="description" content="" />
+        <title>
+          MoviJet || Get the latest information about your favourite movies and
+          TV shows. || Download and watch the latest Movies and TV shows.
+        </title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta
+          name="description"
+          content="Movijet where you can get the latest information about your favourite movies and
+          TV shows. Entertainment 720p Movies, 1080p movies, Dual Audio Movies, Hindi Dubbed Series, Hollywood Movies"
+        />
+        <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=7" />
+        <meta
+          name="keywords"
+          content="movies to watch on netflix, movies to watch on prime, Movies, TV Shows, Streaming, Reviews, API, Actors, Actresses, Photos, User Ratings, Synopsis, Trailers, Teasers, Credits, Cast"
+        />
       </Head>
 
       <div
@@ -64,7 +82,7 @@ const Home = ({ genres, popularData }: Props) => {
           </h1>
           <h2 className="my-4 text-2xl ">Watch anywhere. Free Download.</h2>
           <p className="text-lg text-white">
-            Get the letest information about your favourite movies and TV shows.
+            Get the latest information about your favourite movies and TV shows.
           </p>
           <p className="text-lg ">
             Ready to watch? Just{' '}
@@ -76,6 +94,7 @@ const Home = ({ genres, popularData }: Props) => {
       </div>
       <Heading title="What's Popular" />
       <ResultsCard results={popularData} />
+      <Footer />
     </div>
   )
 }

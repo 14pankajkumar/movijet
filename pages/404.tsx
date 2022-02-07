@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { Header } from '../components'
+import { Footer, Header } from '../components'
 
 const NotFound = () => {
   return (
@@ -21,6 +21,7 @@ const NotFound = () => {
           </Link>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
