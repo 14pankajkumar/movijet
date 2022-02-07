@@ -8,6 +8,10 @@ class Document extends NextDocument<Props> {
     return (
       <Html>
         <Head>
+          <meta
+            name="google-site-verification"
+            content="daBBECnPzbVwLeJlRjBNnedMSacevKNVOP30l52vWbE"
+          />
           <script
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6374059667994234"
