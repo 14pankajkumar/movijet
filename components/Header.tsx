@@ -16,7 +16,7 @@ const Header = () => {
   const { data: session } = useSession()
 
   return (
-    <header className="mx-5 flex h-auto flex-col items-center justify-between sm:flex-row">
+    <header className="p-5 flex h-auto flex-col items-center justify-between sm:flex-row">
       <div className="relative flex max-w-2xl flex-grow justify-evenly">
         <HeaderItems link="/" title="HOME" Icon={HomeIcon} />
 
@@ -50,11 +50,11 @@ const Header = () => {
           <HeaderItems link="/auth/signin" title="SIGNIN" Icon={UserIcon} />
         )}
       </div>
-      <div>
+      <div className='p-0 lg:pr-5'>
         <Link href="/">
           <Image
             className="cursor-pointer object-contain"
-            src="https://links.papareact.com/ua6"
+            src="https://media.graphcms.com/C0msXluTeSDQl2ccOnne"
             height={100}
             width={200}
           />
