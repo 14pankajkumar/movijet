@@ -14,7 +14,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     .then((res) => res.data.results)
 
   const fields: ISitemapField[] = discoverData.map((item: Results) => ({
-    loc: `https://movijet.vercel.app/genre/${item.id}?=${item.title.toLowerCase().replace(' ', '-')}`,
+    loc: `https://movijet.vercel.app/genre/${item.id}?=${item.title.toLowerCase().replaceAll(' ', '-')}`,
     lastmod: new Date().toISOString(),
   }))
 
