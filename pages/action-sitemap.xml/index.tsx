@@ -10,6 +10,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const discoverData = await axios
     .get(`https://api.themoviedb.org/3/discover/movie?api_key=a7d825c1ff54cc3d8971127a5a76602d&with_genres=28`)
     .then((res) => res.data.results)
+    .catch(err => console.log(err)
+    )
   
   const fields: ISitemapField[] = discoverData.map((item: Results) => ({
     loc: `https://movijet.vercel.app/media/${item.id}?title=${item.title.toLowerCase().replaceAll(' ', '-')}`,
