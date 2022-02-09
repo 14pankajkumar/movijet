@@ -8,13 +8,11 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const BASE_URL = process.env.BASE_URL
 
   const discoverData = await axios
-    .get(
-      `${BASE_URL}/3/discover/movie?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`
-    )
+    .get(`${BASE_URL}/3/discover/movie?api_key=${API_KEY}&with_genres=28`)
     .then((res) => res.data.results)
 
   const fields: ISitemapField[] = discoverData.map((item: Results) => ({
-    loc: `https://movijet.vercel.app/genre/${item.id}?=${item.title.toLowerCase().replaceAll(' ', '-')}`,
+    loc: `https://movijet.vercel.app/genre/${item.id}?=${item.title.toLowerCase().replace(' ', '-')}`,
     lastmod: new Date().toISOString(),
   }))
 

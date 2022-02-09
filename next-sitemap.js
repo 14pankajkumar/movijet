@@ -12,7 +12,6 @@ module.exports = {
       `${siteUrl}/xml`,
       `${siteUrl}/sitemap-0.xml`,
       `${siteUrl}/genres-sitemap.xml`,
-      `${siteUrl}/genres-2-sitemap.xml`,
       `${siteUrl}/genres-action-sitemap.xml`,
       `${siteUrl}/genres-adventure-sitemap.xml`,
       `${siteUrl}/genres-animation-sitemap.xml`,
