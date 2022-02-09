@@ -8,7 +8,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const BASE_URL = process.env.BASE_URL
 
   const discoverData = await axios
-    .get(`${BASE_URL}/3/discover/movie?api_key=${API_KEY}&with_genres=28`)
+    .get(`https://api.themoviedb.org/3/discover/movie?api_key=a7d825c1ff54cc3d8971127a5a76602d&with_genres=28`)
     .then((res) => res.data.results)
   
   const fields: ISitemapField[] = discoverData.map((item: Results) => ({
