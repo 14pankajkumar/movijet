@@ -20,7 +20,6 @@ import {
   Heading,
   Hero,
   Nav,
-  Recommendations,
   ResultsCard,
   ReviewsCard,
   VideoCard,
