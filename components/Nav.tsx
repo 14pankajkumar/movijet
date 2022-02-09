@@ -15,7 +15,7 @@ const Nav = ({ genres }: Props) => {
             <h2
               key={item.id}
               onClick={() =>
-                router.push(`/genre/${item.id}?=${item.name.toLowerCase().replaceAll(' ', '-')}`)
+                router.push(`/genre/${item.id}?=${item.name.toLowerCase().split(' ').join('-')}`)
               }
               className="transform cursor-pointer transition duration-100 last:pr-24 hover:scale-125 hover:text-white active:text-red-500"
             >

@@ -19,7 +19,7 @@ const Thumbnail = ({ result }: Props) => {
         router.push(
           `/media/${result.id}?title=${result.title
             .toLowerCase()
-            .replaceAll(' ', '-')}`
+            .split(' ').join('-')}`
         )
       }
     >
