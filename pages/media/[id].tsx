@@ -51,7 +51,7 @@ const Media = ({
     <div>
       <Head>
         <title>
-          {media.title} || Download {media.title} || Watch online {media.title}{' '}
+          {mediaUrl?.title || media.title} || Download {media.title} || Watch online {media.title}{' '}
           - MoviJet
         </title>
         <meta

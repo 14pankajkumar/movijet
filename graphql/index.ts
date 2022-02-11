@@ -9,8 +9,16 @@ export const getMedia = async (mediaId: string) => {
                 id
                 mediaId
                 title
-                storyLine
                 mediaUrl
+                description{
+                raw
+                }
+                storyLine{
+                raw
+                }
+                video{
+                url
+                }
             }
         }     
     `

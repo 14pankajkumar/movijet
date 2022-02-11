@@ -84,9 +84,31 @@ export interface Casts {
 export interface MediaUrl {
     id: string
     mediaId: string
-    mediaUrl: string
     title: string
-    storyLine: string
+    mediaUrl: string
+    description: {
+        raw: {
+            children: [{
+                type: string
+                children: [{
+                    text: string
+                }]
+            }]
+        }
+    }
+    storyLine: {
+        raw: {
+            children: [{
+                type: string
+                children: [{
+                    text: string
+                }]
+            }]
+        }
+    }
+    video: {
+        url: string
+    }
 }
 
 export interface SocialId {
