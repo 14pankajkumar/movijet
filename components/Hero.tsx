@@ -1,16 +1,15 @@
 import Image from 'next/image'
 import React from 'react'
-import { Media, MediaUrl, SocialId } from '../utilities/typing'
+import { Media, SocialId } from '../utilities/typing'
 import { AiOutlineFacebook, AiOutlineInstagram } from 'react-icons/ai'
 import { FiExternalLink, FiTwitter } from 'react-icons/fi'
 
 interface Props {
   media: Media
-  mediaUrl: MediaUrl
   socialId: SocialId
 }
 
-const Hero = ({ media, mediaUrl, socialId }: Props) => {
+const Hero = ({ media, socialId }: Props) => {
   const BASE_URL = process.env.NEXT_PUBLIC_IMAGE_BASE_URL
 
   return (
@@ -27,7 +26,7 @@ const Hero = ({ media, mediaUrl, socialId }: Props) => {
         />
       </div>
       {/* poster */}
-      <div className="relative  mx-auto grid max-w-6xl justify-between md:flex">
+      <div className="relative max-w-7xl mx-auto grid justify-between md:flex">
         <div className="flex items-center justify-center md:w-2/6">
           <Image
             alt={media.title}
@@ -56,10 +55,6 @@ const Hero = ({ media, mediaUrl, socialId }: Props) => {
           <div>
             <h2 className="text-xl font-semibold">Overview</h2>
             <p className="py-3">{media.overview}</p>
-          </div>
-          <div className="py-2">
-            <h1 className="text-xl font-semibold">Story Line</h1>
-            <p className="py-3">{mediaUrl?.storyLine}</p>
           </div>
           <div className="flex h-10 w-10 cursor-pointer gap-4">
             <a href={media.homepage} target="_blank">

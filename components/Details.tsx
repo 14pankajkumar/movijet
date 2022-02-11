@@ -8,7 +8,7 @@ interface Props {
 
 const Details = ({ media, keyword }: Props) => {
   return (
-    <div className="relative bg-black bg-opacity-30 py-8">
+    <div className="max-w-7xl mx-auto relative bg-black bg-opacity-30 py-8">
       <Heading title="Details" />
 
       <div className="mx-auto mt-1 mb-5 grid w-8/12 grid-cols-2 items-center px-5 md:flex md:justify-between">

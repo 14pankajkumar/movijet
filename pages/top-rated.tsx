@@ -37,7 +37,7 @@ const TopRated = ({ genres, results }: Props) => {
       {/* Navbar */}
       <Nav genres={genres} />
 
-      <Heading title="Top Rated" />
+      {/* <Heading title="Top Rated" /> */}
 
       {/* Results */}
       <ResultsCard results={results} />

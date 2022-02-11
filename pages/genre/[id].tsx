@@ -44,7 +44,7 @@ const Genre = ({ results, genres, id }: Props) => {
       {/* Navbar */}
       <Nav genres={genres} />
 
-      <Heading title={data[0]?.name} />
+      {/* <Heading title={data[0]?.name} /> */}
 
       {/* Results */}
       <ResultsCard results={results} />

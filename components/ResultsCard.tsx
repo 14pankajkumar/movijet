@@ -7,7 +7,7 @@ interface Props {
 
 const ResultsCard = ({ results }: Props) => {
   return (
-    <div className="my-5 flex-wrap justify-center px-5 sm:grid md:grid-cols-2 xl:grid-cols-3 3xl:flex">
+    <div className="max-w-7xl mx-auto my-5 flex-wrap justify-center px-5 sm:grid md:grid-cols-2 xl:grid-cols-3 3xl:flex">
       {results.map((result) => {
         return <Thumbnail key={result.id} result={result} />
       })}

@@ -10,7 +10,7 @@ const ReviewsCard = ({ reviews }: Props) => {
   const AVATAR_URL = process.env.NEXT_PUBLIC_USER_AVATAR_URL
 
   return (
-    <div className="relative bg-black bg-opacity-30 py-8">
+    <div className="max-w-7xl mx-auto relative bg-black bg-opacity-30 py-8">
       <Heading title="Reviews" />
 
       <div className="my-10 flex-wrap justify-center gap-5 px-5 sm:grid md:grid-cols-3 xl:grid-cols-2 3xl:flex">

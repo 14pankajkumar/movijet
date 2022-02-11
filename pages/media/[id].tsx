@@ -78,7 +78,7 @@ const Media = ({
       {/* Navbar */}
       <Nav genres={genres} />
 
-      <Hero media={media} mediaUrl={mediaUrl} socialId={socialId} />
+      <Hero media={media} socialId={socialId} />
 
       <CastCard casts={casts} />
 

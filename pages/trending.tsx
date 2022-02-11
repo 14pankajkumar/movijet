@@ -38,7 +38,7 @@ const Trending = ({ genres, results }: Props) => {
       {/* Navbar */}
       <Nav genres={genres} />
 
-      <Heading title="Trending" />
+      {/* <Heading title="Trending" /> */}
 
       {/* Results */}
       <ResultsCard results={results} />

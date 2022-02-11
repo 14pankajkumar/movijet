@@ -11,7 +11,7 @@ const VideoCard = ({ mediaUrl, media }: Props) => {
   const BASE_URL = process.env.NEXT_PUBLIC_IMAGE_BASE_URL
 
   return (
-    <div className="relative py-8">
+    <div className="max-w-7xl mx-auto relative py-8">
       <Heading title="Watch Movie" />
 
       <div className="mb-5 mt-5 flex w-full items-center justify-center overflow-hidden rounded-lg px-5">

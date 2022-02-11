@@ -11,7 +11,7 @@ const CastCard = ({ casts }: Props) => {
   const BASE_URL = process.env.NEXT_PUBLIC_IMAGE_BASE_URL
 
   return (
-    <div className="relative">
+    <div className="max-w-7xl mx-auto relative">
       <Heading title="Top Billed Cast" />
 
       <div className="my-10 flex-wrap justify-center px-5 sm:grid md:grid-cols-3 xl:grid-cols-5 3xl:flex">
