@@ -9,7 +9,7 @@ module.exports = {
       { userAgent: '*', allow: '/' },
     ],
     additionalSitemap: [
-      `${siteUrl}/xml`,
+      `${siteUrl}/sitemap.xml`,
       `${siteUrl}/sitemap-0.xml`,
       `${siteUrl}/genres-sitemap.xml`,
       `${siteUrl}/genres-action-sitemap.xml`,
