@@ -1,4 +1,4 @@
-const siteUrl = 'https://movijet.xyzj'
+const siteUrl = 'https://movijet.xyz'
 
 module.exports = {
   siteUrl,
