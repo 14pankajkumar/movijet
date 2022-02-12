@@ -29,15 +29,20 @@ const User = ({ genres }: Props) => {
       {/* Navbar */}
       <Nav genres={genres} />
 
-      <div className="mt-20 flex h-screen justify-center">
-        <div>
-          <h1 className="grid grid-cols-1 text-3xl font-bold text-white">
-            <p>{session?.user?.name}</p>
-            <p>{session?.user?.email}</p>
-            <p>{session?.user?.uid}</p>
-          </h1>
+      <div className="mx-auto my-5 h-screen max-w-7xl">
+        <div className='flex items-center bg-black bg-opacity-30 p-5'>
+          <img
+            src={`${session?.user?.image}`}
+            alt={`${session?.user?.name}`}
+            className="h-40 w-40 rounded-full"
+          />
+          <div className='mx-5'>
+          <h1 className='text-2xl font-bold'>{session?.user?.name}</h1>
+            <p className='text-lg my-2'>{session?.user?.email}</p>
+          </div>
         </div>
       </div>
+
       <Footer />
     </div>
   )

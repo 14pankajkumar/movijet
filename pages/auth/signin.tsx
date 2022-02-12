@@ -1,5 +1,5 @@
 import { getProviders, signIn } from 'next-auth/react'
-import { Header } from '../../components'
+import { Footer, Header } from '../../components'
 
 interface Props {
   providers: [
@@ -17,7 +17,11 @@ const signin = ({ providers }: Props) => {
 
       <div className="-mt-32 flex min-h-screen flex-col items-center justify-center py-2 px-14 text-center">
         <div>
-        <img className="w-20 mx-10 my-2" src="https://media.graphcms.com/zz9VMtUER4yucCeZX3wT" alt="" />
+          <img
+            className="mx-10 my-2 w-20"
+            src="https://media.graphcms.com/zz9VMtUER4yucCeZX3wT"
+            alt=""
+          />
           {Object.values(providers).map((provider) => (
             <div key={provider.name}>
               <button
@@ -30,6 +34,7 @@ const signin = ({ providers }: Props) => {
           ))}
         </div>
       </div>
+          <Footer />
     </div>
   )
 }

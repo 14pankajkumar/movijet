@@ -59,3 +59,27 @@ export const getUser = async (uid: string | null | undefined) => {
     const result = await request(graphAPI, query, { uid })
     return result.account
 }
+
+export const submitComment = async (obj: object) => {
+    const result = await fetch("/api/comments", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(obj)
+    })
+  
+    return result.json()
+  }
+
+  export const submitContact = async (obj: object) => {
+    const result = await fetch("/api/contactus", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(obj)
+    })
+  
+    return result.json()
+  }
