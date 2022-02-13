@@ -46,6 +46,8 @@ const Genre = ({ results, genres, id }: Props) => {
 
       {/* <Heading title={data[0]?.name} /> */}
 
+      <div id="container-468f7fa593d3c46fb949e12b0a034066"></div>
+
       {/* Results */}
       <ResultsCard results={results} />
       <Footer />

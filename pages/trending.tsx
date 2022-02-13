@@ -40,6 +40,8 @@ const Trending = ({ genres, results }: Props) => {
 
       {/* <Heading title="Trending" /> */}
 
+      <div id="container-468f7fa593d3c46fb949e12b0a034066"></div>
+
       {/* Results */}
       <ResultsCard results={results} />
       <Footer />

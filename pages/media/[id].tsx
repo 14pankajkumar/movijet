@@ -92,7 +92,6 @@ const Media = ({
       <Heading title="Recommendations" />
       <ResultsCard results={recommendationsData} />
 
-      <Heading title='Comment' />
       <Form id={mediaUrl?.mediaId} />
       <Footer />
     </div>

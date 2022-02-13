@@ -39,6 +39,8 @@ const TopRated = ({ genres, results }: Props) => {
 
       {/* <Heading title="Top Rated" /> */}
 
+      <div id="container-468f7fa593d3c46fb949e12b0a034066"></div>
+
       {/* Results */}
       <ResultsCard results={results} />
       <Footer />
