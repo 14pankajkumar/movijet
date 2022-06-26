@@ -13,6 +13,8 @@ class Document extends NextDocument<Props> {
             content="daBBECnPzbVwLeJlRjBNnedMSacevKNVOP30l52vWbE"
           />
           {/* google adsense */}
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6374059667994234"
+     crossorigin="anonymous"></script>
           <script
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6374059667994234"
